@@ -1,0 +1,37 @@
+[project]
+name = "atlas-kb"
+version = "0.1.0"
+description = "Project Atlas: Knowledge Compiler"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.15.1",
+    "pydantic>=2.10.4",
+    "litellm>=1.56.0",
+    "pyyaml>=6.0.2",
+    "sqlite-vec>=0.1.6",
+    "requests>=2.31.0",
+    "pymupdf4llm>=0.0.17",
+    "mcp>=1.2.1"
+]
+
+
+[project.scripts]
+atlas = "atlas.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atlas"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.1.0",
+]

@@ -1,0 +1,72 @@
+# === Project Atlas: research data / system artifacts ===
+raw/
+wiki/
+output/
+.atlas/
+atlas.db
+.env
+.python-version
+.venv/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# === Coverage ===
+.coverage
+htmlcov/
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# === Public-repo exclusions (IP / process / agent context) ===
+# AI / agent context
+CLAUDE.md
+AGENTS.md
+.claude/
+
+# Session / process / internal docs
+SESSION_HANDOFF.md
+CODEBASE_HEALTH.md
+PROJECT_INTEL.md
+ONBOARDING.md
+CLEANUP_REPORT.md
+PHASE*_NOTES.md
+*_implementation_prompt.md
+task.md
+
+# Strategy / planning docs
+PRODUCT_ROADMAP.md
+COMPETITIVE_AUDIT.md
+BACKEND_PLAN.md
+BLUEPRINT.md
+
+# Standard docs the user opted to exclude
+ARCHITECTURE.md
+CHANGELOG.md
+
+# Atlas-specific
+docs/llm-knowledge-compiler-blueprint.md
+docs/agent-guides/
+reports/
+
+# Backups / scratch
+.git.old.*
+.internal/
+_delete_test_*
+
+# Misc
+*.b64
